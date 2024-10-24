@@ -66,11 +66,10 @@ source pyspark_env/bin/activate
 
 ## 5. Install PySpark and Jupyter Notebook in the Virtual Environment
 
-With the virtual environment activated, install PySpark and Jupyter:
+With the virtual environment activated, install libraries from the requirements.txt file:
 
 ```bash
-pip install pyspark
-pip install notebook
+pip install -r requirements.txt
 ```
 
 ## 6. Configure PySpark to Work with Jupyter
