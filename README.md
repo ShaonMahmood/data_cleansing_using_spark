@@ -1,4 +1,4 @@
-# Setting Up PySpark on Mac with Jupyter Notebook
+# Setting Up PySpark on Mac to run the notebook
 
 ## 1. Install Homebrew (If not already installed)
 
@@ -94,7 +94,15 @@ Then, source the environment variables:
 source ~/.pyspark_env
 ```
 
-## 7. Start Jupyter Notebook with PySpark
+## 7. Data Preparation
+
+Download the kaggle dataset from this link
+
+[Card Transaction Dataset](https://www.kaggle.com/datasets/e47f88e5e8ce59c9598475a107d9a80ebc363a83859a59facb069b13a9001773)
+
+After downloading, store it in a folder named data. Rename the downloaded file to **cc_transactions.json** to match with the name used inside notebook.
+
+## 8. Start Jupyter Notebook with PySpark
 
 Launch Jupyter with PySpark by running the following command:
 
@@ -104,16 +112,6 @@ pyspark
 
 This should open Jupyter Notebook in your browser, and you can now run PySpark code in the notebook environment.
 
-## 8. Verify the Setup
+## 9. Run the notebook
 
-Once inside Jupyter Notebook, verify that Spark is working by running:
-
-```python
-from pyspark.sql import SparkSession
-spark = SparkSession.builder.appName("pyspark-test").getOrCreate()
-
-# Check Spark version
-spark.version
-```
-
-If the Spark version is returned successfully, your setup is complete.
+Once inside Jupyter Notebook, open notebook file named "card_data_analysis.ipynb"
